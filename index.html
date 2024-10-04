@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do u love me card</title>
+</head>
+<body>
+    <div class="c1">
+    <img id="img1" src="">
+    <h3>do you love me "you cant say no"i mean it""</h3>
+    <div class="c2">
+        <button id="noBtn">no</button>
+        <button id="yes">yes</button>
+        <p id="response"></p>
+    </div>
+</div>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+      background-color:white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .c1{
+     justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 500px;
+      height: 400px;
+     background-color: rgb(228, 189, 232);
+     border: 2px solid rgb(243, 171, 195);
+     padding: 50px;
+    
+    }
+    #img1{
+        width: 500px;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(168, 7, 174, 0.34);
+        margin-bottom: 10px;
+    }
+    button{
+      width: 50px;
+      padding:10px;
+      background-color:  #ebe0ec;
+      border-radius: 20px;
+      font-size: 16px;
+      color:rgb(243, 171, 195);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border: 2px solid rgb(243, 171, 195);
+    margin-bottom: 10px;
+    
+    }
+    button:hover{
+        background-color: rgb(163, 113, 211);
+    }
+h3{
+    padding-left: 20px;
+}
+.c2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#noBtn {
+        position: absolute;
+      }
+
+</style>
+<script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yes');
+    const response = document.getElementById('response');
+
+   
+    noBtn.addEventListener('mouseover', () => {
+        const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+        noBtn.style.left = `${x}px`;
+        noBtn.style.top = `${y}px`;
+    });
+
+   
+    yesBtn.addEventListener('click', () => {
+        response.textContent = "Yay! me tooo";
+    });
+</script>
+</body>
+</html>
